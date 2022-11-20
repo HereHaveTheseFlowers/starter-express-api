@@ -2,7 +2,7 @@ const express = require('express')
 const cors = require('cors');
 const app = express()
 app.use(cors({
-    origin: 'https://anyobjects.herokuapp.com'
+    origin: ['https://anyobjects.herokuapp.com', 'https://herehavetheseflowers.com/']
   }));
 
 app.use(express.json())
