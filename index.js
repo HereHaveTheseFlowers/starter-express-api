@@ -15,7 +15,7 @@ app.post("/auth", function (req, res) {
   if(login !== process.env.LOGIN || password !== process.env.PASSWORD) {
     res.status(404).send({ message: 'Wrong password' });
   }
-  res.status(200).send({ message: 'Access provided', phpKey: process.env.PHPKEY })
+  res.status(200).send({ message: process.env.PHPKEY })
 })
 
 app.listen(process.env.PORT || 3000)
